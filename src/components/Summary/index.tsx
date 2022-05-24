@@ -1,8 +1,10 @@
-import { Container } from "./styles";
+import { useTransactions } from "../../hooks/useTransactions";
+
 import incomeImg from "../../assets/income.svg"
 import outcomeImg from "../../assets/outcome.svg"
 import totalImg from '../../assets/total.svg'
-import { useTransactions } from "../../hooks/useTransactions";
+
+import { Container } from "./styles";
 
 export function Summary() {
     const { transactions } = useTransactions();
@@ -56,7 +58,9 @@ export function Summary() {
                 </strong>
             </div>
 
-            <div className="highlight-background">
+            <div
+                className={summary.total >= 0 ? "green-background" : "red-background"} 
+            >
                 <header>
                     <p>Total</p>
                     <img src={totalImg} alt="Total" />
