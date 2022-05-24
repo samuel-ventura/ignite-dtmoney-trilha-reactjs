@@ -48,7 +48,7 @@ export function Summary() {
                     <img src={outcomeImg} alt="Saídas" />
                 </header>
                 <strong>
-                    -
+                    {summary.withdraws > 0 ? '-' : ''}
                     {
                         new Intl.NumberFormat('pt-BR', {
                             style: 'currency',

@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr); // 1fr 1fr 1fr
+
+    @media (max-width: 810px) {
+        grid-template-rows: 1fr;
+        grid-template-columns: none;
+    }
+
     gap: 2rem;
     margin-top: -10rem;
 
